@@ -4,17 +4,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Target Sistemas</title>
 </head>
 <body>
 
-  <section class="container">
-    <h1>Faturamento</h1>
-    <div class="resultado">
-      
+  <div class="container">
+    <div class="faturamentos">
+      <h1 class="titulo">Faturamento</h1>
+      <table id="tabela-geral">
+        <thead>
+          <th>Dia</th>
+          <th>Valor Faturamento</th>
+        </thead>
+        <tbody id="tbodyFaturamento">
+        </tbody>
+      </table>
     </div>
-  </section>
 
+    <div class="resultados">
+      <h1 class="titulo">Resultados</h1>
+      <table>
+        <thead>
+          <th>Condição</th>
+          <th>Resultado</th>
+          <th>Info extras</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="condicao1">O menor valor de faturamento ocorrido em um dia do mês</td>
+            <td id="resultado1">--</td>
+            <td id="info-extra1">--</td>
+          </tr>
+          <tr>
+            <td id="condicao2">O maior valor de faturamento ocorrido em um dia do mês</td>
+            <td id="resultado2">--</td>
+            <td id="info-extra2">--</td>
+          </tr>
+          <tr>
+            <td id="condicao3">Número de dias no mês em que o valor de faturamento diário foi superior à média mensal</td>
+            <td id="resultado3">6</td>
+            <td id="info-extra3">--</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 
   <script src="faturamento.js"></script>
 </body>
