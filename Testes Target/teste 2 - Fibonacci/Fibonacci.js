@@ -28,6 +28,7 @@ function verificaNumeroInformado(numeroInformado) {
         resultadoSequencia.value = arrayFibonacci;
       }else {
         resultadoTexto.value = "Número informado NÃO pertence a sequência de Fibonacci";
+        resultadoSequencia.value = '--';
       }
     }
 }
