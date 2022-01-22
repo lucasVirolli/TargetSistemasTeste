@@ -1,0 +1,14 @@
+.campo-insercao,
+.campo-resultado{
+  display: flex;
+  margin: 3rem;
+}
+
+textarea{
+  height: 8rem;
+  width: 53rem;
+}
+
+label{
+  font-size: 1.6rem;
+}
