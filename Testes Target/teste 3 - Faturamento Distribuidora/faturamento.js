@@ -99,11 +99,11 @@ function valoresFaturamento(json) {
 
       let tr = document.createElement('tr');
       let td = document.createElement('td');
-      td.innerHTML = faturamento.dia;
+      td.textContent = faturamento.dia;
       tr.appendChild(td)
 
       td = document.createElement('td');
-      td.innerHTML = `R$ ${valor.join(',')}`;
+      td.textContent = `R$ ${valor.join(',')}`;
       tr.appendChild(td)
   
       tbodyFaturamento.appendChild(tr)
