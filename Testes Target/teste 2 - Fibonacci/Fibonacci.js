@@ -1,18 +1,36 @@
-function verificaNumeroInformado (numeroInformado) {
+function verificaNumeroInformado(numeroInformado) {
 
-  const arrayFibonacci = [0, 1];
-  let soma = 0;
+    numeroInformado = document.getElementById('insercao-numero').value;
 
-  for(let i = 0; soma < numeroInformado; i++){
-    soma = arrayFibonacci[i] + arrayFibonacci[i+1];
-    arrayFibonacci.push(soma);
-  }
+    const verificaCarecteres = (string) => /\D/g.test(string);
 
-  const verificador = arrayFibonacci.includes(numeroInformado)
-  verificador ? 
-  console.log("Número informado pertence a sequência de Fibonacci") :
-  console.log("Número informado NÃO pertence a sequência de Fibonacci");
+    if (verificaCarecteres(numeroInformado) || numeroInformado == '') {
+      alert('Por favor, digite apenas um número inteiro positivo e sem espaços');
+      document.location.reload(true);
+      return;
+    } else {
+      numeroInformado = Number(numeroInformado);
 
+      const arrayFibonacci = [0, 1];
+      let soma = 0;
+
+      for (let i = 0; soma < numeroInformado; i++) {
+        soma = arrayFibonacci[i] + arrayFibonacci[i + 1];
+        arrayFibonacci.push(soma);
+      }
+      
+      const resultadoTexto = document.getElementById('resultado-texto');
+      const resultadoSequencia = document.getElementById('resultado-sequencia');
+      const verificador = arrayFibonacci.includes(numeroInformado);
+  
+      if(verificador){
+        resultadoTexto.value = "Número informado pertence a sequência de Fibonacci";
+        resultadoSequencia.value = arrayFibonacci;
+      }else {
+        resultadoTexto.value = "Número informado NÃO pertence a sequência de Fibonacci";
+      }
+    }
 }
 
-verificaNumeroInformado(21)
+const botaoResultado = document.querySelector('.submit');
+botaoResultado.addEventListener('click', () => verificaNumeroInformado());
