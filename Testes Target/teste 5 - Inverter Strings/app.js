@@ -1,12 +1,12 @@
-function inverteString (string) {
+function inverteString (textoInserido) {
 
-  string = document.getElementById('area-de-texto').value;
+  textoInserido = document.getElementById('area-de-texto').value;
 
-  let numDeCaracteres = string.length;
+  let numDeCaracteres = textoInserido.length;
   let stringInvertida = '';
 
-  for(let i = 0; i < string.length; i++){
-    let decrescendoString = string[numDeCaracteres - 1];
+  for(let i = 0; i < textoInserido.length; i++){
+    let decrescendoString = textoInserido[numDeCaracteres - 1];
     stringInvertida = stringInvertida += decrescendoString;
     numDeCaracteres--;
   };
